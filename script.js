@@ -22,6 +22,10 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
+const KEY_RIGHT = 39;
+const KEY_LEFT = 37;
+const KEY_UP = 38;
+
 var spelerX = 200; // x-positie van speler
 var spelerY = 650; // y-positie van speler
 
@@ -32,9 +36,9 @@ var vijandX = 0;   // x-positie van vijand
 var vijandY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
+var KeyIsDown
 
 
-var GEE = "gaaf";
 
 
 /* ********************************************* */
@@ -108,8 +112,19 @@ var beweegKogel = function() {
  * Kijkt wat de toetsen/muis etc zijn.
  * Updatet globale variabele spelerX en spelerY
  */
-var beweegSpeler = function(beweegspeler) {
-    
+ var beweegSpeler = function() { 
+
+if (keyIsDown (KEY_RIGHT)) {
+  spelerX = spelerX + 20;
+}
+
+if (keyIsDown (KEY_LEFT)) {
+  spelerX = spelerX - 20;
+}
+if (keyIsDown (KEY_UP)) {
+  spelerY = spelerY - 20;
+}
+
 };
 /**
  * Zoekt uit of de vijand is geraakt
