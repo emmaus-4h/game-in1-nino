@@ -21,22 +21,23 @@ const UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
-
+var KeyIsDown
 const KEY_RIGHT = 39;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
-
 var spelerX = 200; // x-positie van speler
 var spelerY = 650; // y-positie van speler
-
+var vijandX = 1000;   // x-positie van vijand
+var vijandY = 650;   // y-positie van vijand
+var vijandbeweging = 10
+var beweegVijand
+var vijandsterkerX = 900;
+var vijandsterkerY = 880;
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
-
 var score = 0; // aantal behaalde punten
-var KeyIsDown
+
 
 
 
@@ -79,7 +80,6 @@ var tekenKogel = function(x, y) {
 
 };
 
-
 /**
  * Tekent de speler
  * @param {number} x x-coördinaat
@@ -96,10 +96,13 @@ var tekenSpeler = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegVijand = function() {
-    
-};
+ vijandX = vijandX - vijandbeweging
+  }
 
-
+ vijandsterkerX = vijandsterkerX - 20;
+  if (vijandsterkerX < 0) {
+    vijandsterkerX = 2500;
+  }
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
@@ -125,8 +128,8 @@ if (keyIsDown (KEY_UP)) {
   spelerY = spelerY - 20;
 }
   if (!keyIsDown(KEY_UP)) {
-    spelerY = spelerY + 20;
-    //  spelerX = spelerX - 20;
+    spelerY = spelerY + 60;
+    //  spelerX = spelerX - 40;
     if (spelerY > 650) { spelerY = 650 };
   }
 
