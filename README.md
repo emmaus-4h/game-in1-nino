@@ -9,10 +9,10 @@ Gemaakt door:
 
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
-- [ ] teken veld
-- [ ] teken speler
-- [ ] beweeg speler
-- [ ] teken vijand
+- [x] teken veld
+- [x] teken speler
+- [x] beweeg speler
+- [x] teken vijand
 - [ ] beweeg vijand
 - [ ] teken kogel
 - [ ] beweeg kogel
