@@ -14,7 +14,9 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] beweeg speler
 - [x] teken vijand
 - [x] beweeg vijand
-
+- [x] vijand spawnt opnieuw
+- [x] levensbalk toevoegen
+- [x] natuurdetails maken
 
 
 

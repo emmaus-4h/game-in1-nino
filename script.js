@@ -35,8 +35,13 @@ var vijandsterkerX = 900;
 var vijandsterkerY = 880;
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
-var aantallevens = 5;
+var aantallevens = 3;
 var score = 0; // aantal behaalde punten
+var geraaktX = 0;
+var geraaktY = 0;
+var hardgeraaktX = 0;
+var hardgeraaktY = 0;
+
 
 
 
@@ -159,7 +164,9 @@ var checkVijandGeraakt = function() {
  * @returns {boolean} true als speler is geraakt
  */
 var checkSpelerGeraakt = function() {
-    
+  geraaktX = spelerX - vijandX 
+  geraaktX = aantallevens - 1
+
   return false;
 };
 
