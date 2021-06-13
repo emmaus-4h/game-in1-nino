@@ -51,11 +51,22 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("lightgrey")
+  fill("lightblue")
   rect(0, 20, width - 0 * 0, height - 2 * 20);
+//gras
+fill ("lightgreen");
+rect (0, 680, 4240 - 2 * 400, 2800 - 1 * 2000);
+  //detail
+fill ("brown");
+rect(1000, 400, 80, 300);
+fill("green");
+ellipse(1040, 350, 280, 280);
+//detail2
+fill ("brown");
+rect(190, 400, 80, 300);
+fill("green");
+ellipse(240, 350, 280, 280);
 };
-
-
 /**
  * Tekent de vijand
  * @param {number} x x-coördinaat
