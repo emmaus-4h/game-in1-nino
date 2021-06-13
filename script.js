@@ -35,7 +35,7 @@ var vijandsterkerX = 900;
 var vijandsterkerY = 880;
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
-
+var aantallevens = 5;
 var score = 0; // aantal behaalde punten
 
 
@@ -51,8 +51,8 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("lightblue");
-  rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill("lightgrey")
+  rect(0, 20, width - 0 * 0, height - 2 * 20);
 };
 
 
@@ -97,12 +97,10 @@ var tekenSpeler = function(x, y) {
  */
 var beweegVijand = function() {
  vijandX = vijandX - vijandbeweging
+   if (vijandX < 0) 
+    vijandX = 1500;
   }
 
- vijandsterkerX = vijandsterkerX - 20;
-  if (vijandsterkerX < 0) {
-    vijandsterkerX = 2500;
-  }
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
@@ -160,8 +158,14 @@ var checkSpelerGeraakt = function() {
  * @returns {boolean} true als het spel is afgelopen
  */
 var checkGameOver = function() {
-    
+    textSize(35)
+  fill("red")
+  text("LEVENS", 30, 50);
+  text(aantallevens, 72, 100);
   return false;
+
+ 
+
 };
 
 
@@ -172,10 +176,10 @@ var checkGameOver = function() {
  */
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+  createCanvas(1380, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  
 }
 
 

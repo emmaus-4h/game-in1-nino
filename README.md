@@ -1,6 +1,6 @@
 Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
-## Mijn spel: *The Gunslinger*
+## Mijn spel: *The Jumper*
 Gemaakt door:
 - Nino
 - --
@@ -13,12 +13,8 @@ Basis: uitleg, spelen, afgaan en punten
 - [x] teken speler
 - [x] beweeg speler
 - [x] teken vijand
-- [ ] beweeg vijand
-- [ ] teken kogel
-- [ ] beweeg kogel
-- [ ] punten op scherm zetten
-- [ ] punten kunnen scoren
-- [ ] uitlegscherm
+- [x] beweeg vijand
+
 
 
 
